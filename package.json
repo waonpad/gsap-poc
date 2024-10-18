@@ -1,0 +1,46 @@
+{
+  "name": "next-temp",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "prepare": "lefthook install",
+    "setup": "$npm_execpath install && cp -n .env.example .env; exit 0",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "fmt": "biome format --write .",
+    "lnt": "biome lint --write .",
+    "che": "biome check --write .",
+    "test": "vitest run",
+    "test:watch": "vitest watch --silent",
+    "test:ci": "vitest run --silent"
+  },
+  "dependencies": {
+    "@t3-oss/env-nextjs": "^0.11.0",
+    "next": "^15.0.0-canary.161",
+    "react": "^19.0.0-rc-e4953922-20240919",
+    "react-dom": "^19.0.0-rc-e4953922-20240919",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.8.3",
+    "@testing-library/jest-dom": "^6.4.8",
+    "@testing-library/react": "^16.0.0",
+    "@testing-library/user-event": "^14.5.2",
+    "@types/node": "^20",
+    "@types/react": "npm:types-react@rc",
+    "@types/react-dom": "npm:types-react-dom@rc",
+    "@vitejs/plugin-react": "^4.3.1",
+    "babel-plugin-react-compiler": "^0.0.0-experimental-6067d4e-20240919",
+    "happy-dom": "^14.12.3",
+    "lefthook": "^1.7.15",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5",
+    "vitest": "^2.0.5"
+  },
+  "overrides": {
+    "@types/react": "npm:types-react@rc",
+    "@types/react-dom": "npm:types-react-dom@rc"
+  }
+}
