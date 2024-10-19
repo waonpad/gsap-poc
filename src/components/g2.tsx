@@ -44,7 +44,7 @@ export const G2 = () => {
       <div ref={container} className="h-20 w-20 bg-green-400">
         移動する要素
       </div>
-      <div className="h-screen" />
+      {/* <div className="h-screen" /> */}
     </>
   );
 };
